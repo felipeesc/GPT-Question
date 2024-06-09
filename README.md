@@ -6,12 +6,20 @@ OPEN IA request API.
 ## Overview  
 This API is responsible for communicating with Openai and returning responses asynchronously.
 
-technologies used:
+https://platform.openai.com/docs/examples/default-interview-questions
 
-- Java 17
-- Spring Boot 3.3.0
-- Webflux (reactor)
----
+## Tecnologias Utilizadas
+
+- Java 17: [Java]
+- Spring Boot 3.3.0: [Spring Boot]
+- Maven: [Maven]
+- Reactive [Reactor]
+
+[Java]: https://www.java.com
+[Spring Boot]: https://spring.io/projects/spring-boot
+[Maven]: https://maven.apache.org
+[Reactor]: https://spring.io/reactive
+
 
 ## Main class:
 
@@ -29,7 +37,7 @@ mvn install
 ## Test
 
 ---
-Access link to swagger, client for test execution.
+Access link to swagger, client for running tests after uploading the API.
 
 <a href="http://localhost:8080/swagger-ui.html">http://localhost:8080/swagger-ui.html</a>
 
