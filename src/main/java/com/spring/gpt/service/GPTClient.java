@@ -16,13 +16,13 @@ import java.util.List;
 @Service
 public class GPTClient {
 
-    private WebClient webclient;
+    private final WebClient webclient;
     private final GptProperties gptProperties;
 
 
     public GPTClient(WebClient.Builder webclientBuilder, @Value("${gpt.key}") String key, GptProperties gptProperties) {
         this.gptProperties = gptProperties;
-        this.webclient = webclientBuilder.baseUrl(gptProperties.getUrl())
+        this.webclient = webclientBuilder.baseUrl("https://api.openai.com/v1/chat/completions")
                 .defaultHeader("Content-Type", "application/json")
                 .defaultHeader("Authorization", "Bearer " + key)
                 .build();
