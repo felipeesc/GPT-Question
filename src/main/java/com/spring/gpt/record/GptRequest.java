@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 import java.util.List;
 
-// Anotação para serializar CamelCase, apesar delas serem SnakeCase na request da open
+// Annotation to serialize CamelCase, despite them being SnakeCase
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public record GptRequest(
         String model,
