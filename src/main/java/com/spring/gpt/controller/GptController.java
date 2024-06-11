@@ -20,7 +20,7 @@ public class GptController {
     public Mono<String> getAnswer(@RequestBody String mensagem) {
         return gptClient.communicatesGpt(mensagem)
                 .flatMap(GptResponseMapper::extractAnswer)
-                .onErrorResume(e -> Mono.just("An error occurred while getting the response: " + e.getMessage()));
+                .onErrorResume(e -> Mono.just("An error occurred while getting the response : " + e.getMessage()));
     }
 
 }
