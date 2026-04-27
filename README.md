@@ -1,46 +1,54 @@
-GPT-Request
-=================
-OPEN IA request API.
+# GPT-Question
 
----
-## Overview  
-This API is responsible for communicating with Openai and returning responses asynchronously.
+Spring Boot API that communicates with OpenAI asynchronously using Project Reactor.
 
-https://platform.openai.com/docs/examples/default-interview-questions
+## Tech Stack
 
-## Tecnologias Utilizadas
+- Java 17
+- Spring Boot 3.3.0
+- Project Reactor (WebFlux)
+- Maven
+- Swagger/OpenAPI
 
-- Java 17: [Java]
-- Spring Boot 3.3.0: [Spring Boot]
-- Maven: [Maven]
-- Reactive [Reactor]
+## Prerequisites
 
-[Java]: https://www.java.com
-[Spring Boot]: https://spring.io/projects/spring-boot
-[Maven]: https://maven.apache.org
-[Reactor]: https://spring.io/reactive
+- Java 17+
+- Maven 3.8+
+- OpenAI API Key
 
+## Configuration
 
-## Main class:
+Crie um `application.properties` local (não commitar):
 
-``` java
-com.spring.gpt.GptApplication
+```properties
+openai.api.key=YOUR_OPENAI_API_KEY
 ```
 
-## Installation
+## Running
 
----
+```bash
+./mvnw spring-boot:run
 ```
-mvn clean
-mvn install
+
+## Build
+
+```bash
+./mvnw clean package
 ```
-## Test
 
----
-Access link to swagger, client for running tests after uploading the API.
+## API Docs
 
-<a href="http://localhost:8080/swagger-ui.html">http://localhost:8080/swagger-ui.html</a>
+Após subir a aplicação:
 
+```
+http://localhost:8080/swagger-ui.html
+```
 
+## How it works
 
+A requisição é enviada para a OpenAI API e a resposta é retornada de forma assíncrona via `Flux`/`Mono`, sem bloquear threads.
 
+## Reference
+
+- [OpenAI API Docs](https://platform.openai.com/docs/examples/default-interview-questions)
+- [Spring Reactive](https://spring.io/reactive)
